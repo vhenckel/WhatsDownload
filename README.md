@@ -7,7 +7,7 @@
 ---
 ## The Google Chrome extension for downloading contacts in your WhatsApp groups
 
-![Extension Link](https://chrome.google.com/webstore/detail/whatsdownload/cocccccdblgmgoigiopheenlfndcckcj)
+[Extension Link](https://chrome.google.com/webstore/detail/whatsdownload/cocccccdblgmgoigiopheenlfndcckcj)
 
 ---
 
