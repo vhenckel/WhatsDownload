@@ -26,7 +26,7 @@
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença MIT.
+This project is licensed under the terms of the MIT license.
 
 Feito com  🧠  & ❤️  por Vitor Henckel 
 
