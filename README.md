@@ -14,7 +14,7 @@
 ## 🦸 Autor
 
 <a href="https://vitor.henckel.com.br" target="_blank">
- <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://vitor.henckel.com.br/img/eu.jpg" width="100px;" alt=""/>
  <br />
  <sub><b>Vitor Henckel</b></sub></a> <a href="https://vitor.henckel.com.br" title="Vitor Henckel">🚀</a>
  <br />
@@ -28,6 +28,6 @@
 
 Este projeto esta sobe a licença MIT.
 
-Feito com 🧠 & ❤️  por Vitor Henckel 👋🏽 [Entre em contato!](https://www.linkedin.com/in/vitorhenckel/)
+Feito com 🧠  & ❤️  por Vitor Henckel 👋🏽 [Entre em contato!](https://www.linkedin.com/in/vitorhenckel/)
 
 ---
