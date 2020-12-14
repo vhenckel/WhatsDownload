@@ -19,7 +19,7 @@
  <sub><b>Vitor Henckel</b></sub></a> <a href="https://vitor.henckel.com.br" title="Vitor Henckel">🚀</a>
  <br />
 
-[![Twitter Badge](https://img.shields.io/badge/-@Vitor_Henckel-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Vitor_Henckel)](https://twitter.com/Vitor_Henckel) [![Linkedin Badge](https://img.shields.io/badge/-Vitor Henckel-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vitorhenckel/)](https://www.linkedin.com/in/vitorhenckel/) 
+[![Twitter Badge](https://img.shields.io/badge/-@Vitor_Henckel-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Vitor_Henckel)](https://twitter.com/Vitor_Henckel) [![Linkedin Badge](https://img.shields.io/badge/-Vitor_Henckel-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vitorhenckel/)](https://www.linkedin.com/in/vitorhenckel/) 
 
 
 ---
@@ -28,6 +28,8 @@
 
 Este projeto esta sobe a licença MIT.
 
-Feito com 🧠  & ❤️  por Vitor Henckel 👋🏽 [Entre em contato!](https://www.linkedin.com/in/vitorhenckel/)
+Feito com  🧠  & ❤️  por Vitor Henckel 
+
+👋🏽 [Entre em contato!](https://www.linkedin.com/in/vitorhenckel/)
 
 ---
