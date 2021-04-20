@@ -1,4 +1,5 @@
-document.addEventListener('click', function (e) {
+document.addEventListener('click', () => {
+  //once: true  se habilitado, roda apenas uma vez
   const linkAntigo = document.getElementsByClassName('whatsVHckl')
   if (linkAntigo[0]) {
     linkAntigo[0].remove()
@@ -14,29 +15,24 @@ document.addEventListener('click', function (e) {
         clearInterval(interval)
         const contactsArr = data.split(',')
         if (contactsArr.length > 1) {
-          const contactsFilter = contactsArr.filter(item => {
-            let contact = item.replace(/ |-/g, "")
-            if (contact.startsWith('+')) {
-              return contact
+          const contactsClean = []
+          contactsArr.filter(item => {
+            let contact = item.replace(/[^\d]+/g, "")
+            if (contact) {
+              contactsClean.push(contact)
             }
-          })
-          let contactsClean = contactsFilter.map(item => {
-            let contact = item.replace(/ |-|(|)/g, "")
-            return contact
           })
           if (contactsClean) {
             const [elementHeader] = document.getElementsByClassName('_1-qgF')
             elementHeader.setAttribute('style', 'display:flex;')
             const elementHeaderSearch = document.getElementsByClassName('_2n-zq')
             elementHeaderSearch[4].setAttribute('style', 'display:none;')
-
-            let documentCSV = `Phones
+            let documentCSV = `Phones,Phones2
 `
             for (const item of contactsClean) {
-              documentCSV += `${item}
+              documentCSV += `${item},+${item}
 `
             }
-
             let whatsVHckl = document.createElement('div')
             whatsVHckl.className = 'whatsVHckl'
             whatsVHckl.setAttribute('style', 'z-index:100;width:40px;height:40px;padding-left:5px;')
