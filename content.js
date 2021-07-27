@@ -1,16 +1,15 @@
 document.addEventListener(
   "click",
-  () => {
+  (element) => {
     const linkAntigo = document.getElementsByClassName("whatsVHckl");
     if (linkAntigo[0]) {
       linkAntigo[0].remove();
     }
     let count = 0;
+    const groupName = element.target.innerText;
     const interval = setInterval(() => {
-      const [group] = document.getElementsByClassName("z4t2k");
-      const [main] = document.querySelectorAll("#main .YmixP");
       try {
-        const groupName = group.innerText;
+        const [main] = document.querySelectorAll("#main .zzgSd");
         const data = main.innerText;
         if (data && data != "click here for group info") {
           clearInterval(interval);
@@ -24,11 +23,10 @@ document.addEventListener(
               }
             });
             if (contactsClean) {
-              const [elementHeader] = document.getElementsByClassName("_1-qgF");
+              const [elementHeader] = document.getElementsByClassName("_23P3O");
               elementHeader.setAttribute("style", "display:flex;");
-              const elementHeaderSearch = document.getElementsByClassName(
-                "_2n-zq"
-              );
+              const elementHeaderSearch =
+                document.getElementsByClassName("_2cNrC");
               elementHeaderSearch[4].setAttribute("style", "display:none;");
               let documentCSV = `First Name,Mobile Phone,Phones
 `;

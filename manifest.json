@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "WhatsDownload - WhatsApp groups export",
   "description": "Instantly export contacts from your WhatsApp groups to a CSV file.",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "Vitor Henckel",
   "content_scripts": [
     {
