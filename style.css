@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 550px;
+  width: 400px;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  /* border: 1px solid #000; 056062*/
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  line-height: inherit;
+  width: 200px;
+  margin-left: 80px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background: #8822e2;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #a4a4a4;
+  transition: ALL 0.3s ease;
+}
+
+input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+input + label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+  line-height: 30px;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: solid 2px;
+  vertical-align: bottom;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  background-color: #8822e2;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+}
+
+#groupName,
+#numberOfContacts {
+  font-size: 16px;
+  font-weight: bold;
+  color: #8822e2;
+}
+
+#numberOfContacts {
+  font-size: 18px;
+}
+
+#groupNotFound {
+  font-size: 20px;
+  text-align: center;
+}

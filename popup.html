@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsDownload</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+  <style>
+    #header {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <img src="./icon128.png" width="64" alt="" />
+    <h1>WhatsDownload</h1>
+  </div>
+  <br />
+  <div id="groupNotFound">
+    <p>
+      You need to open WhatsApp, click on one of your groups so that the
+      extension can load contacts!
+    </p>
+  </div>
+  <br />
+  <div id="groupFound">
+    <div id="group">
+      Group: <strong><span id="groupName">Grupo XYZ</span></strong>
+    </div>
+    <br />
+    <div id="Contacts">
+      Contacts found:
+      <strong><span id="numberOfContacts"></span></strong>
+    </div>
+    <br />
+    <div>
+      <span><strong>Choose the format:</strong></span><br />
+      <input type="radio" name="format" value="csv" id="csv" checked />
+      <label for="csv">CSV</label> <br />
+      <input type="radio" name="format" value="txt" id="txt" />
+      <label for="txt">TXT</label> <br />
+      <input type="radio" name="format" value="xls" id="xls" />
+      <label for="xls">XLS</label> <br /><br />
+      <label><strong>Phones:</strong></label><br />
+      <input type="radio" name="numberFormat" value="format1" id="format1" checked />
+      <label for="format1">+55 51 99999-9999</label>
+      <br />
+      <input type="radio" name="numberFormat" value="format2" id="format2" />
+      <label for="format2">+5551999999999</label>
+      <br />
+      <input type="radio" name="numberFormat" value="format3" id="format3" />
+      <label for="format3">51 99999-9999</label>
+      <br />
+      <input type="radio" name="numberFormat" value="format4" id="format4" />
+      <label for="format4">51999999999</label> <br />
+      <br />
+      <button name="export" id="export" class="btn">Export</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
