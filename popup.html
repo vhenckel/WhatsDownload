@@ -7,61 +7,98 @@
   <title>WhatsDownload</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
-  <style>
-    #header {
-      text-align: center;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <div id="header">
-    <img src="./icon128.png" width="64" alt="" />
-    <h1>WhatsDownload</h1>
+  <div class="app-shell">
+    <header class="hero">
+      <img src="./icon128.png" width="64" alt="WhatsDownload icon" />
+      <div class="hero-copy">
+        <h1>WhatsDownload</h1>
+        <p>Export contacts from your WhatsApp groups</p>
+      </div>
+    </header>
+
+    <section class="clearance-banner" id="clearanceBanner" hidden>
+      <div class="clearance-head">
+        <div class="clearance-icon" aria-hidden="true">🔥</div>
+        <div class="clearance-copy">
+          <div class="clearance-title-row">
+            <span class="clearance-title">Queima de estoque</span>
+            <span class="clearance-badge">-50%</span>
+          </div>
+          <p class="clearance-desc">50% de desconto no plano anual. Use o cupom no checkout:</p>
+        </div>
+      </div>
+
+      <button type="button" class="clearance-coupon" id="clearanceCoupon">
+        <span class="clearance-coupon-kicker">Cupom</span>
+        <span class="clearance-coupon-code">WA_09</span>
+        <span class="clearance-coupon-action" id="clearanceCouponAction">Copiar</span>
+      </button>
+      <p class="clearance-hint" id="clearanceHint">Copie e cole no Stripe, em Adicionar código promocional.</p>
+
+      <button type="button" class="clearance-subscribe" id="clearanceSubscribe">
+        Assinar agora →
+      </button>
+      <p class="clearance-note">Válido até 01/11/2026</p>
+    </section>
+
+    <section id="groupNotFound" class="empty-state">
+      <p>Open WhatsApp Web and click a group to load its contacts here.</p>
+    </section>
+
+    <section id="groupFound" class="content-card">
+      <div class="summary-stack">
+        <div class="summary-item summary-item-group">
+          <span class="summary-label">Group</span>
+          <strong id="groupName">Grupo XYZ</strong>
+        </div>
+
+        <div class="summary-item summary-item-contacts">
+          <div class="summary-inline">
+            <span class="summary-label">Contacts</span>
+            <strong id="numberOfContacts"></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-card" id="planCard">
+        <div id="planStatus"></div>
+        <div id="exportHint"></div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="formatSelect">Format</label>
+        <select id="formatSelect" name="format">
+          <option value="csv">CSV</option>
+          <option value="txt">TXT</option>
+          <option value="xls">XLS</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="numberFormatSelect">Phone format</label>
+        <select id="numberFormatSelect" name="numberFormat">
+          <option value="format1">+55 51 99999-9999</option>
+          <option value="format2">+5551999999999</option>
+          <option value="format3">51 99999-9999</option>
+          <option value="format4">51999999999</option>
+        </select>
+      </div>
+
+      <div id="actions" class="actions single-action">
+        <button name="exportFull" id="exportFull" class="btn btn-primary">
+          Export
+        </button>
+      </div>
+
+      <div id="actionFeedback" class="action-feedback" aria-live="polite"></div>
+      <div id="paymentError"></div>
+    </section>
   </div>
-  <br />
-  <div id="groupNotFound">
-    <p>
-      You need to open WhatsApp, click on one of your groups so that the
-      extension can load contacts!
-    </p>
-  </div>
-  <br />
-  <div id="groupFound">
-    <div id="group">
-      Group: <strong><span id="groupName">Grupo XYZ</span></strong>
-    </div>
-    <br />
-    <div id="Contacts">
-      Contacts found:
-      <strong><span id="numberOfContacts"></span></strong>
-    </div>
-    <br />
-    <div>
-      <span><strong>Choose the format:</strong></span><br />
-      <input type="radio" name="format" value="csv" id="csv" checked />
-      <label for="csv">CSV</label> <br />
-      <input type="radio" name="format" value="txt" id="txt" />
-      <label for="txt">TXT</label> <br />
-      <input type="radio" name="format" value="xls" id="xls" />
-      <label for="xls">XLS</label> <br /><br />
-      <label><strong>Phones:</strong></label><br />
-      <input type="radio" name="numberFormat" value="format1" id="format1" checked />
-      <label for="format1">+55 51 99999-9999</label>
-      <br />
-      <input type="radio" name="numberFormat" value="format2" id="format2" />
-      <label for="format2">+5551999999999</label>
-      <br />
-      <input type="radio" name="numberFormat" value="format3" id="format3" />
-      <label for="format3">51 99999-9999</label>
-      <br />
-      <input type="radio" name="numberFormat" value="format4" id="format4" />
-      <label for="format4">51999999999</label> <br />
-      <br />
-      <button name="export" id="export" class="btn">Export</button>
-    </div>
-  </div>
+
   <script src="popup.js"></script>
 </body>
 

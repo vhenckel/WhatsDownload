@@ -1,13 +1,13 @@
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 3,
-  "name": "WhatsDownload - Groups export",
+  "name": "WADownload - Groups export",
   "description": "Instantly export contacts from your groups to a file of your choice.",
-  "version": "3.2.1.2",
+  "version": "4.1.0.9",
   "author": "Vitor Henckel",
   "action": {
     "default_icon": "icon.png",
-    "default_title": "WhatsDownload - Exporting contacts from your groups!",
+    "default_title": "WADownload - Exporting contacts from your groups!",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -15,12 +15,27 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
-  "optional_host_permissions": ["https://web.whatsapp.com/"],
+  "permissions": ["storage", "downloads"],
+  "host_permissions": [
+    "https://extensionpay.com/*",
+    "https://web.whatsapp.com/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://web.whatsapp.com/"],
-      "js": ["content.js"]
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js", "wppLoader.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://extensionpay.com/*"],
+      "js": ["ExtPay.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["wa.js", "inject.js"],
+      "matches": ["https://web.whatsapp.com/*"]
     }
   ],
   "background": {
